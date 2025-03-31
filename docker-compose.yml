@@ -11,6 +11,7 @@ services:
     #   - api_gems:/usr/local/bundle
     environment:
       - RAILS_ENV=development
+    command: sh -c "bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0"
 
   frontend:
     build: ./task-manager-ui
