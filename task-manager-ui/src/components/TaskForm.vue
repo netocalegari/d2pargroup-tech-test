@@ -131,4 +131,7 @@ button {
 button:hover {
   background: #218838;
 }
+#description {
+  resize: none;
+}
 </style>

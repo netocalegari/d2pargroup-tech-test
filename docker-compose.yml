@@ -1,0 +1,23 @@
+services:
+  api:
+    build: ./tasks-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./tasks-api:/app:cached
+      - api_gems:/usr/local/bundle
+    # volumes:
+    #   - ./tasks-api:/app
+    #   - api_gems:/usr/local/bundle
+    environment:
+      - RAILS_ENV=development
+
+  frontend:
+    build: ./task-manager-ui
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./task-manager-ui:/app
+      - /app/node_modules
+volumes:
+  api_gems:

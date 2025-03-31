@@ -93,8 +93,12 @@ li {
   margin: 10px 0;
   border-radius: 6px;
 }
+#description-container {
+  width: 80%;
+}
 .task-info {
   flex: 1;
+  min-width: 0;
 }
 .title {
   font-weight: bold;
@@ -102,7 +106,8 @@ li {
 }
 .description {
   font-size: 0.9em;
-  color: #555;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 .status {
   font-size: 0.8em;
