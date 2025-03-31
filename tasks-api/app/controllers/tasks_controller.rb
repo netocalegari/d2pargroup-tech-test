@@ -15,8 +15,9 @@ class TasksController < ApplicationController
   # POST /tasks - Cria uma nova tarefa
   def create
     task = Task.new(task_params)
+    puts task
     if task.save
-      head :created
+      render json: task, status: :created
     else
       render json: {errors: task.errors}, status: :unprocessable_entity
     end
@@ -25,7 +26,7 @@ class TasksController < ApplicationController
   # PUT /tasks/:id - Atualiza uma tarefa
   def update
     if @task.update(task_params)
-      render json: @task, status: :ok
+      render json: @task, status: :no_content
     else
       render json: {errors: @task.errors}, status: :unprocessable_entity
     end
