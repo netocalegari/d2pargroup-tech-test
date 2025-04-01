@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import { api } from '../api'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+import './TaskForm.css'
 
 const props = defineProps({
   task: Object,
@@ -98,42 +99,3 @@ const submitForm = async () => {
     </form>
   </div>
 </template>
-
-<style>
-.task-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-button:hover {
-  background: #218838;
-}
-#description {
-  resize: none;
-}
-</style>

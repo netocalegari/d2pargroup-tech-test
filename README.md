@@ -70,13 +70,14 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
    ```bash
    cd tasks-api
    bundle install
+   rails db:migrate
    rails server
 
    URL disponível -> http://localhost:3000
 
    ```
 
-3. Acesse o diretório do frontend e e inicie o servidor:
+3. Acesse o diretório do frontend e inicie o servidor:
 
    ```bash
    cd task-manager-ui
@@ -88,7 +89,9 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
    ```
 
 4. Executando testes:
+
    - Dentro do diretório da API, rodar o comando
+
      ```bash
      rspec
 

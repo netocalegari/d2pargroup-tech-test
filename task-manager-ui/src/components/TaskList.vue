@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import { api } from '../api'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+import './TaskList.css'
 
 const emit = defineEmits()
 
@@ -62,85 +63,3 @@ onMounted(fetchTasks)
     </div>
   </div>
 </template>
-
-<style>
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.scrollable {
-  max-height: 36vh;
-  overflow-y: scroll;
-}
-h2 {
-  text-align: center;
-  color: #333;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 6px;
-}
-#description-container {
-  width: 80%;
-}
-.task-info {
-  flex: 1;
-  min-width: 0;
-}
-.title {
-  font-weight: bold;
-  color: #222;
-}
-.description {
-  font-size: 0.9em;
-  overflow-wrap: break-word;
-  max-width: 100%;
-}
-.status {
-  font-size: 0.8em;
-  color: white;
-  background: #007bff;
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-.delete-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  margin-left: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-.delete-btn:hover {
-  background: #c0392b;
-}
-.edit-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 0.3s;
-  margin-left: 10px;
-}
-
-.edit-btn:hover {
-  background: #0056b3;
-}
-</style>
