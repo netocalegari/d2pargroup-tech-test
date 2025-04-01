@@ -63,7 +63,6 @@ const submitForm = async () => {
 
 <template>
   <div class="task-form">
-    {{ console.log('task =>', task) }}
     <h2>{{ task ? 'Editar Tarefa' : 'Nova Tarefa' }}</h2>
     <form @submit.prevent="submitForm">
       <div class="form-group">
