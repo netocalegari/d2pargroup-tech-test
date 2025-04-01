@@ -22,7 +22,7 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
 - Rails
 - Node.js
 
-## 🐳 Execução com Docker
+## 🐳 Execução com Docker (Recomendado)
 
 1. Clone o repositório:
 
