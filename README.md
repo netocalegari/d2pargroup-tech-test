@@ -7,6 +7,7 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
 - **Backend**: API Ruby on Rails
 - **Frontend**: Aplicação Vue.js
 - **Infraestrutura**: Docker para conteinerização
+- **Testes**: Testes unitários com Rspec
 
 ## 📋 Pré-requisitos
 
@@ -28,7 +29,6 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
    ```bash
    git clone https://github.com/netocalegari/quindtech-tech-test.git
    cd quindtech-tech-test
-
    ```
 
 2. Iniciar container:
@@ -45,6 +45,15 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
    Backend -> http://localhost:3000
 
    ```
+
+   ### Atenção: pode levar alguns minutos para o container carregar complemente e disponibilizar todos os recursos
+
+4. Executando testes:
+   - Com o container rodando, execute o seguinte:
+     ```bash
+     docker-compose exec api sh
+     bundle exec rspec
+     ```
 
 ## Execução sem Docker
 
@@ -77,6 +86,13 @@ Este projeto consiste em uma aplicação de gerenciamento de tarefas com:
    URL disponível -> http://localhost:5173
 
    ```
+
+4. Executando testes:
+   - Dentro do diretório da API, rodar o comando
+     ```bash
+     rspec
+
+     ```
 
 ## Endpoints da api
 

@@ -36,7 +36,9 @@ const submitForm = async () => {
         type: 'success',
       })
 
+      props.task = null
       emit('taskUpdated')
+      emit('clearTask')
     } else {
       await api.post('/tasks', formData.value)
 
@@ -61,6 +63,7 @@ const submitForm = async () => {
 
 <template>
   <div class="task-form">
+    {{ console.log('task =>', task) }}
     <h2>{{ task ? 'Editar Tarefa' : 'Nova Tarefa' }}</h2>
     <form @submit.prevent="submitForm">
       <div class="form-group">

@@ -5,6 +5,10 @@ import { ref } from 'vue'
 
 const taskToEdit = ref(null)
 const refreshTasks = ref(0)
+
+const clearTaskToEdit = () => {
+  taskToEdit.value = null
+}
 </script>
 
 <template>
@@ -12,7 +16,12 @@ const refreshTasks = ref(0)
     <div class="content">
       <h1>✅ Gerenciador de Tarefas</h1>
 
-      <TaskForm :task="taskToEdit" @taskAdded="refreshTasks++" @taskUpdated="refreshTasks++" />
+      <TaskForm
+        :task="taskToEdit"
+        @taskAdded="refreshTasks++"
+        @taskUpdated="refreshTasks++"
+        @clearTask="clearTaskToEdit"
+      />
 
       <TaskList :key="refreshTasks" @editTask="taskToEdit = $event" />
     </div>
